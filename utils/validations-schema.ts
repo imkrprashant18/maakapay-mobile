@@ -16,3 +16,12 @@ export const verifySchema = z.object({
 });
 
 export type VerifyFormData = z.infer<typeof verifySchema>;
+
+
+
+export const loginSchema = z.object({
+        email: z.string().email("Please enter a valid work email"),
+        password: z.string().min(1, "Password is required"),
+});
+
+export type LoginFormData = z.infer<typeof loginSchema>;

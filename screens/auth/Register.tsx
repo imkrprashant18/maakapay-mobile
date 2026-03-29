@@ -96,7 +96,7 @@ export default function SignUpScreen() {
                                 <View style={styles.footer}>
                                         <ThemedText>
                                                 Already part of the network?{" "}
-                                                <ThemedText type="link" onPress={() => router.push("/VerifyOtp")}>Log in</ThemedText>
+                                                <ThemedText type="link" onPress={() => router.push("/Login")}>Log in</ThemedText>
                                         </ThemedText>
 
                                         <View style={styles.encryptionBadge}>
