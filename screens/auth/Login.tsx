@@ -7,13 +7,14 @@ import { LoginFormData, loginSchema } from "@/utils/validations-schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Image } from "expo-image";
 import * as LocalAuthentication from "expo-local-authentication";
+import { useRouter } from "expo-router";
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Platform, ScrollView, StyleSheet, TouchableOpacity, useColorScheme, View } from "react-native";
 
 export default function LoginScreen() {
         const isDark = useColorScheme() === "dark";
-
+        const router = useRouter();
         const [biometricType, setBiometricType] = useState<"fingerprint" | "face" | null>(null);
 
         useEffect(() => {
@@ -114,7 +115,7 @@ export default function LoginScreen() {
                                 {/* Bottom Navigation */}
                                 <View style={styles.footer}>
                                         <ThemedText style={styles.footerText}>
-                                                Don't have an account? <ThemedText type="link" style={styles.linkText}>Create yours</ThemedText>
+                                                Don't have an account? <ThemedText type="link" style={styles.linkText} onPress={() => { router.push("/home") }}>Create yours</ThemedText>
                                         </ThemedText>
 
                                         <View style={styles.legalRow}>

@@ -37,6 +37,9 @@ export default function RootLayout() {
           <Stack.Screen name="SignUp" options={{ headerShown: false }} />
           <Stack.Screen name="Login" options={{ headerShown: false }} />
           <Stack.Screen name="VerifyOtp" options={{ headerShown: false }} />
+
+          {/* tab screens */}
+          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         </Stack>
         <StatusBar style="auto" />
       </PaperProvider>
